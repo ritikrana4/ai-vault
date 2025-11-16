@@ -16,9 +16,6 @@ An AI-powered document management system that automatically generates summaries 
 
 Before you begin, ensure you have the following installed:
 - **Node.js** (v18 or higher)
-- **npm** or **yarn**
-- **Supabase Account** (for database and file storage)
-- **OPEN AI API Key**
 
 ## Setup Instructions
 
@@ -66,13 +63,6 @@ cd ../frontend
 npm install
 ```
 
-#### Configure Environment Variables
-
-Create a `.env` file in the `frontend` directory:
-
-```env
-VITE_API_BASE_URL=http://localhost:3001/api
-```
 
 #### Start the Frontend Development Server
 
