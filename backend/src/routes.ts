@@ -47,7 +47,6 @@ router.get('/documents/:id', async (req: Request, res: Response) => {
 router.get('/folders', async (_req: Request, res: Response) => {
   try {
     const folders = await services.getAllFolders();
-    console.log(folders);
     res.json(folders);
   } catch (error: any) {
     res.status(500).json({ error: 'Failed to fetch folders' });
