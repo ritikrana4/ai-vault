@@ -94,24 +94,30 @@ export const DocumentViewer: React.FC<DocumentViewerProps> = ({ documentId, onCl
 
         <div className="flex border-b border-neutral-200 bg-white">
           <button
-            className={`flex-1 py-4 px-4 border-none bg-transparent text-sm font-medium text-neutral-500 cursor-pointer transition-all duration-200 border-b-2 border-transparent hover:text-neutral-900 hover:bg-neutral-50 ${
-              activeTab === 'summary' ? 'text-primary-600 border-b-primary-600 bg-primary-50' : ''
+            className={`flex-1 py-4 px-4 border-none text-sm cursor-pointer transition-all duration-200 border-b-2 ${
+              activeTab === 'summary' 
+                ? 'text-neutral-900 font-semibold border-b-primary-600 bg-primary-100' 
+                : 'text-neutral-500 font-medium bg-transparent border-transparent hover:text-neutral-900 hover:bg-neutral-50'
             }`}
             onClick={() => setActiveTab('summary')}
           >
             {LABELS.SUMMARY}
           </button>
           <button
-            className={`flex-1 py-4 px-4 border-none bg-transparent text-sm font-medium text-neutral-500 cursor-pointer transition-all duration-200 border-b-2 border-transparent hover:text-neutral-900 hover:bg-neutral-50 ${
-              activeTab === 'markdown' ? 'text-primary-600 border-b-primary-600 bg-primary-50' : ''
+            className={`flex-1 py-4 px-4 border-none text-sm cursor-pointer transition-all duration-200 border-b-2 ${
+              activeTab === 'markdown' 
+                ? 'text-neutral-900 font-semibold border-b-primary-600 bg-primary-100' 
+                : 'text-neutral-500 font-medium bg-transparent border-transparent hover:text-neutral-900 hover:bg-neutral-50'
             }`}
             onClick={() => setActiveTab('markdown')}
           >
             {LABELS.MARKDOWN}
           </button>
           {/* <button
-            className={`flex-1 py-4 px-4 border-none bg-transparent text-sm font-medium text-neutral-500 cursor-pointer transition-all duration-200 border-b-2 border-transparent hover:text-neutral-900 hover:bg-neutral-50 ${
-              activeTab === 'original' ? 'text-primary-600 border-b-primary-600 bg-primary-50' : ''
+            className={`flex-1 py-4 px-4 border-none text-sm cursor-pointer transition-all duration-200 border-b-2 ${
+              activeTab === 'original' 
+                ? 'text-neutral-900 font-semibold border-b-primary-600 bg-primary-100' 
+                : 'text-neutral-500 font-medium bg-transparent border-transparent hover:text-neutral-900 hover:bg-neutral-50'
             }`}
             onClick={() => setActiveTab('original')}
           >
